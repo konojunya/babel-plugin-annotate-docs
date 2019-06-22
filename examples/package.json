@@ -4,10 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "babel ./index.js"
+    "start": "babel ./index.js -o dist.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5"
+    "@babel/core": "^7.4.5",
+    "babel-plugin-annotate-docs": "file:../lib"
   }
 }

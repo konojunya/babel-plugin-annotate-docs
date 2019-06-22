@@ -1,6 +1,5 @@
 import { COMMENT_ANNOTATE_REGEX } from "./constants";
 import { ANNOTATE_DOCS } from "./type";
-import { generateMarkdown } from "./template";
 import { writeFile } from "./utils";
 
 const plugin = () => {
@@ -46,7 +45,7 @@ const plugin = () => {
           }
         }
 
-        writeFile(generateMarkdown(matches));
+        writeFile(matches);
       }
     }
   };

@@ -8,7 +8,7 @@ export const generateMarkdown = (props: ANNOTATE_DOCS[]) => {
     markdown += `|${props.type.toUpperCase()}|${
       props.assignee === "unknown"
         ? props.assignee
-        : `https://github.com/${props.assignee}`
+        : `[${props.assignee}](https://github.com/${props.assignee})`
     }|${props.value}|\n`;
   });
 
