@@ -1,7 +1,11 @@
 import { ANNOTATE_DOCS } from "./type";
 
+export const sort_logic = (a: ANNOTATE_DOCS, b: ANNOTATE_DOCS): number => {
+  return a.type > b.type ? 1 : -1;
+};
+
 export const generateMarkdown = (props: ANNOTATE_DOCS[]) => {
-  const sortedProps = [...props].sort((a, b) => (a.type > b.type ? 1 : -1));
+  const sortedProps = [...props].sort(sort_logic);
   let markdown = `|type|assignee|value|\n`;
   markdown += `|:--|:--|:--|\n`;
   sortedProps.forEach(props => {
